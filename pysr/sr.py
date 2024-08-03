@@ -2554,6 +2554,8 @@ def idx_model_selection(equations: pd.DataFrame, model_selection: str):
         chosen_idx = filtered_equations["score"].idxmax()
     elif model_selection == "score":
         chosen_idx = equations["score"].idxmax()
+    elif model_selection == "SMC":
+        
     else:
         raise NotImplementedError(
             f"{model_selection} is not a valid model selection strategy."
